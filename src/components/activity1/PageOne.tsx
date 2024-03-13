@@ -1,9 +1,11 @@
-import React from 'react'
+import { Box, Typography } from "@mui/material";
 
 const PageOne = () => {
   return (
-    <div>PageOne</div>
-  )
-}
+    <Box className="flex items-center h-screen justify-center">
+      <Typography>Hello World</Typography>
+    </Box>
+  );
+};
 
-export default PageOne
+export default PageOne;

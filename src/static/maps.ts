@@ -6,11 +6,15 @@ const navItems = [
     subItem: [
       {
         title: "1. Center “Hello World”",
-        url: "/activity1",
+        url: "/activity1/pageOne",
       },
       {
         title: "2. Create a counter app",
-        url: "/activity1/page2",
+        url: "/activity1/pageTwo",
+      },
+      {
+        title: "3. Create a simple calculator ",
+        url: "/activity1/pageThree",
       },
     ],
   },

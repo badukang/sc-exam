@@ -1,6 +1,7 @@
 import { Button, Slider } from "@mui/material";
 import React from "react";
 
+//no need
 const Header = () => {
   return (
     <>
