@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@/assets/styles/globals.css";
+import AppProviders from "@/providers/AppProviders";
+import Header from "@/common/Header";
+import { Box, CssBaseline } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,12 +11,32 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  sidebar,
 }: Readonly<{
   children: React.ReactNode;
+  sidebar: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body id="app">
+        <AppProviders>
+          <Box sx={{ display: "flex" }}>
+            <CssBaseline />
+            {/* <Header /> */}
+            {sidebar}
+            <Box
+              component="main"
+              sx={{
+                flexGrow: 1,
+                bgcolor: "background.default",
+                height: "100vh",
+              }}
+            >
+              {children}
+            </Box>
+          </Box>
+        </AppProviders>
+      </body>
     </html>
   );
 }
