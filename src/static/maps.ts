@@ -13,7 +13,19 @@ const navItems = [
         url: "/activity1/pageTwo",
       },
       {
-        title: "3. Create a simple calculator ",
+        title: "3. Create a simple calculator",
+        url: "/activity1/pageThree",
+      },
+      {
+        title: "4. Create a centered button",
+        url: "/activity1/pageFour",
+      },
+      {
+        title: "5. Create a basic todo list",
+        url: "/activity1/pageThree",
+      },
+      {
+        title: "6. Create a simple calculator ",
         url: "/activity1/pageThree",
       },
     ],

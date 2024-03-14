@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Stack,
-  TextField,
-} from "@mui/material";
+import { Box, Button, ButtonGroup, Stack, TextField } from "@mui/material";
 import { useState } from "react";
 
 const inputs = {
