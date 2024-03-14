@@ -1,28 +1,16 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  ButtonBaseProps,
-  ButtonBaseTypeMap,
-  ButtonGroup,
-  ButtonTypeMap,
-  ExtendButtonTypeMap,
-  Stack,
-  TextField,
-} from "@mui/material";
-import { ButtonHTMLAttributes, useEffect, useRef, useState } from "react";
+import { Box, Button } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
 
 const PageFour = () => {
-  const { innerWidth: width, innerHeight: height } = window;
+  const { innerWidth, innerHeight } = window;
   const [size, setSize] = useState({ width: 0, height: 0 });
   const buttonRef = useRef<null>(null);
 
   const getRandomColor = () => {
     return Math.floor(Math.random() * 0xffffff).toString(16);
   };
-
-  console.log(innerWidth, innerHeight);
 
   //is css zoom allowed?
   const handleClick = () => {
