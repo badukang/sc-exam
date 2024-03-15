@@ -28,23 +28,10 @@ const CardsItem = ({ data }: any) => {
         </div>
         <div className="p-2">
           <div>height: {height}</div>
-          <div>width: {weight}</div>
+          <div>weight: {weight}</div>
         </div>
       </div>
     </div>
-
-    // <Grid item xs={2} sm={4} md={4}>
-    //   <Card>
-    //     <CardHeader
-    //       avatar={
-    //         <Image width="30" height="30" alt={name} src={avatar?.sub} />
-    //       }
-    //       title={capitalize(data?.name)}
-    //     />
-    //   </Card>
-    //   {/* <Image alt={name} src={avatar?.main} fill />
-    //   <Typography textTransform="capitalize">{data?.name}</Typography> */}
-    // </Grid>
   );
 };
 

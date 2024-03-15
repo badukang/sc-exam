@@ -6,11 +6,11 @@ import { Box } from "@mui/material";
 import useFetchPokedex from "@/hooks/pokemon/useFetchPokedex";
 
 const PageSix = () => {
-  const { results } = useFetchPokedex(33);
+  const pokedex = useFetchPokedex(33) as any;
 
   return (
     <Box className="flex items-center h-screen justify-center">
-      <CardsList data={results} />
+      <CardsList data={pokedex?.results} />
     </Box>
   );
 };

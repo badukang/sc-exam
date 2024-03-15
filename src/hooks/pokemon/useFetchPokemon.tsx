@@ -15,17 +15,20 @@ const useFetchPokemon = ({ url }: Props) => {
       .then((data) => setPokemon(data));
   }, []);
 
-  return {
+  const pokemonStats = _.first(pokemon?.stats) as any;
+  const results = {
     //pokemon,
     name: pokemon?.name,
     avatar: {
       main: pokemon?.sprites?.other?.dream_world?.front_default,
       sub: pokemon?.sprites?.other?.showdown?.front_default,
     },
-    hp: _.first(pokemon?.stats)?.base_stat,
+    hp: pokemonStats?.base_stat,
     height: pokemon?.height,
     weight: pokemon?.weight,
-  }; //return needed only
+  } as any;
+
+  return results; //return needed only
 };
 
 export default useFetchPokemon;

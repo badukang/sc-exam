@@ -1,11 +1,14 @@
 "use client";
 
 import { Box, Button } from "@mui/material";
+import _ from "lodash";
 import { useEffect, useRef, useState } from "react";
+
+const initSize = { width: 0, height: 0 };
 
 const PageFour = () => {
   const { innerWidth, innerHeight } = window;
-  const [size, setSize] = useState({ width: 0, height: 0 });
+  const [size, setSize] = useState(initSize);
   const buttonRef = useRef<null>(null);
 
   const getRandomColor = () => {
@@ -26,10 +29,14 @@ const PageFour = () => {
   };
 
   useEffect(() => {
-    setSize({
-      height: buttonRef.current.clientHeight,
-      width: buttonRef.current.clientWidth,
-    });
+    if (buttonRef.current) {
+      const { clientHeight, clientWidth } = buttonRef?.current;
+
+      setSize({
+        height: clientHeight,
+        width: clientWidth,
+      });
+    }
   }, []);
 
   return (
